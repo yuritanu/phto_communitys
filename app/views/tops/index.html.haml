@@ -1,6 +1,37 @@
-.header
-  あいう
-.main
-  えお
-.footer
-  かきく
+.top
+  .header-top
+    .header-menu
+      %p.title  Photo　Ring　Community
+      %ul.header-menu__list
+        %li.header-menu__list__categorie
+          -# カテゴリーつける
+          %p.categorie-t community
+          
+          .categorie
+            %ul.categorie-list
+              %li.parent-list
+                親
+                %ul.categorie-list-children
+                  %li.children-list
+                    子
+                    %ul.categorie-list-grand_children
+                      %li.grand_children-list
+                        孫
+
+        %li.header-menu__list__sachi
+          -#  検索機能つけます
+          %input.sachi-bar{type: "text", placeholder: "写真をさがす"}
+        %li.header-menu__list__login
+          -# ログイン機能つける
+          %p.login-t Login
+
+
+
+
+  .main
+    えお
+
+
+
+  .footer
+    かきく
