@@ -20,7 +20,8 @@
 
         %li.header-menu__list__sachi
           -#  検索機能つけます
-          %input.sachi-bar{type: "text", placeholder: "写真をさがす"}
+          %input.sachi-bar{type: "text", placeholder: "\uf002 写真をさがす", class: 'fa'}
+            
         %li.header-menu__list__login
           -# ログイン機能つける
           %p.login-t Login
@@ -29,9 +30,12 @@
 
 
   .main
-    えお
+    .main-list
+      えお
 
 
 
   .footer
-    かきく
+    .footer-list
+      %i.fas.fa-camera.fa-3x.white
+    %span.title-c ©️Photo　Ring　Community
