@@ -1,1 +1,48 @@
-ああああああ
+.top
+  .header-top
+    .header-menu
+      %p.title  Photo　Ring　Community
+      
+      %ul.header-menu__list
+        
+        %li.header-menu__list__categorie
+          -# カテゴリーつける     
+          .categorie
+            %p.categorie-t community
+            
+            %ul.categorie-list
+              %li.parent-list
+                = link_to '親',"#", class:"parent-list__link"
+              %li.parent-list
+                = link_to '親',"#", class:"parent-list__link"
+                %ul.categorie-list-children
+                  %li.children-list
+                    子
+                    %ul.categorie-list-grand_children
+                      %li.grand_children-list
+                        孫
+
+        %li.header-menu__list__sachi
+          -#  検索機能つけます
+          %input.sachi-bar{type: "text", placeholder: "\uf002 写真をさがす", class: 'fa'}
+            
+        %li.header-menu__list__login
+          -# ログイン機能つける
+          %p.login-t Login ＊ sign up
+
+
+
+
+  .main
+    .main-list
+      .main-list__right
+        あああ
+      .main-list__left
+        あいう
+
+
+
+  .footer
+    .footer-list
+      %i.fas.fa-camera.fa-3x.white
+    %span.title-c ©️Photo　Ring　Community
