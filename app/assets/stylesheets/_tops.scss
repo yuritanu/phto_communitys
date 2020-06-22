@@ -7,7 +7,7 @@ a{
   color: black;
 }
 .header-top{
-  background-color:#81d5eb;
+  background: linear-gradient(#81d5eb,  #deeef1);
   width: 100%;
   text-align: center;
   .header-menu{
@@ -35,9 +35,10 @@ a{
         }
         .categorie-list{
           width: calc(100% / 3);
+          z-index: 2;
           position: absolute;
           top: 107px;
-          background-color: #81d5eb; 
+          background: linear-gradient(#81d5eb,  #deeef1); 
           visibility: hidden;
           .parent-list{
             border-top:#cfebf1 solid 1px;
@@ -50,7 +51,7 @@ a{
           }
           .categorie-list-children{
             width: 200px;
-            background-color: #81d5eb;
+            background: linear-gradient(#81d5eb,  #deeef1);
             position: absolute;
             top: 0;
             left: 100%;
@@ -67,7 +68,7 @@ a{
           }
           .categorie-list-grand_children{
             width: 200px;
-            background-color: #81d5eb;
+            background: linear-gradient(#81d5eb,  #deeef1);
             position: absolute;
             top: 0;
             left: 100%;
@@ -102,22 +103,29 @@ a{
 
 .main{
   width: 100%;
-  margin-top: 10px;
-  padding-left: 10px;
+  height: 100%;
+  background-color:#dfba6a;
+  position: relative;
   .main-list{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    background-color:#156927;
   }
 }
 
 
 .footer{
-  position: absolute;
+  position: relative;
   bottom: 0px;
   height: 100px;
   width: 100%;
-  background-color: #81d5eb;
+  background: linear-gradient(#deeef1, #81d5eb );
   text-align: center;
   .footer-list{
-    margin-top: 20px;
+    padding-top: 10px;
     .white{
       color: white;
     }
