@@ -2,6 +2,10 @@
   height: 100vh;
   width: 100%;
 }
+a{
+  text-decoration: none;
+  color: black;
+}
 .header-top{
   background-color:#81d5eb;
   width: 100%;
@@ -12,6 +16,7 @@
       padding-bottom: 15px;
       font-size: larger;
     }
+    
     &__list{
       padding: 10px 0px;
       height: 50px;
@@ -20,10 +25,61 @@
       border-top:#cfebf1 solid 1px;
       &__categorie{
         width: calc(100% / 3);
+        &:hover{
+          .categorie-list{
+            visibility: visible;
+          }
+        }
         .categorie-t{
           font-size: larger;
         }
+        .categorie-list{
+          width: calc(100% / 3);
+          position: absolute;
+          top: 107px;
+          background-color: #81d5eb; 
+          visibility: hidden;
+          .parent-list{
+            border-top:#cfebf1 solid 1px;
+            padding: 5px 0;
+            &:hover{
+              .categorie-list-children{
+                visibility: visible;
+              }
+            }
+          }
+          .categorie-list-children{
+            width: 200px;
+            background-color: #81d5eb;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            visibility: hidden;
+            &:hover{
+              .categorie-list-grand_children{
+                visibility: visible;
+              }
+            }
+            .children-list{
+              border-top:#cfebf1 solid 1px;
+              padding: 5px 0;
+            }
+          }
+          .categorie-list-grand_children{
+            width: 200px;
+            background-color: #81d5eb;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            .grand_children-list{
+              border-top:#cfebf1 solid 1px;
+              padding: 5px 0;
+            }
+          }
+        }
       }
+
+
       &__login{
         width: calc(100% / 3);
         .login-t{

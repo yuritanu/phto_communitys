@@ -2,15 +2,19 @@
   .header-top
     .header-menu
       %p.title  Photo　Ring　Community
+      
       %ul.header-menu__list
+        
         %li.header-menu__list__categorie
-          -# カテゴリーつける
-          %p.categorie-t community
-          
+          -# カテゴリーつける     
           .categorie
+            %p.categorie-t community
+            
             %ul.categorie-list
               %li.parent-list
-                親
+                = link_to '親',"#", class:"parent-list__link"
+              %li.parent-list
+                = link_to '親',"#", class:"parent-list__link"
                 %ul.categorie-list-children
                   %li.children-list
                     子
