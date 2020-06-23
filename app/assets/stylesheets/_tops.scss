@@ -113,6 +113,52 @@ a{
     right: 15px;
     bottom: 15px;
     background-color:#156927;
+    &__right{
+      position: absolute;
+      right: 80px;
+      top: 60px;
+      height: 80%;
+      width: 30%;
+      background-color:#ff7f509d;
+      transform: rotate(20deg);
+      &__photo{
+        background-color:white;
+        margin: 25px;
+        width: 85%;
+        height: 85%;
+      }
+        
+    }
+    &__left{
+      position: absolute;
+      left: 100px;
+      top: 90px;
+      height: 80%;
+      width: 30%;
+      background-color:#e96c3ee0;
+      transform: rotate(-15deg);
+      &__photo{
+        background-color:white;
+        margin: 25px;
+        width: 85%;
+        height: 85%;
+      }
+    }
+    .photos{
+      position: absolute;
+      margin: 20px;
+      background-color: yellow;
+      width: 75%;
+      height: 50%;
+    }
+    p{
+      padding-top: 90%;
+      text-align: center;
+      font-weight: bold;
+      font-family: arial unicode ms;
+      font-size: larger;
+      color: #d067e6;
+    }
   }
 }
 
