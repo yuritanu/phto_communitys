@@ -1,41 +1,5 @@
 .top
-  .header-top
-    .header-menu
-      %p.title  Photo　Ring　Community
-      
-      %ul.header-menu__list
-        
-        %li.header-menu__list__categorie
-          -# カテゴリーつける     
-          .categorie
-            %p.categorie-t community
-            
-            %ul.categorie-list
-              %li.parent-list
-                = link_to '親',"#", class:"parent-list__link"
-              %li.parent-list
-                = link_to '親',"#", class:"parent-list__link"
-                %ul.categorie-list-children
-                  %li.children-list
-                    子
-                    %ul.categorie-list-grand_children
-                      %li.grand_children-list
-                        孫
-
-        %li.header-menu__list__sachi
-          -#  検索機能つけます
-          %input.sachi-bar{type: "text", placeholder: "\uf002 写真をさがす", class: 'fa'}
-            
-        %li.header-menu__list__login
-          - if user_signed_in?
-            = link_to "マイページ", "#", class:"login-t"
-            ＊ 
-            = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "login-t"
-          - else
-            = link_to "Login", new_user_session_path, class: "login-t"
-            ＊ 
-            = link_to "sign up", new_user_registration_path, class: "login-t"
-
+  = render '/tops/header'
 
   .main
     .main-list
