@@ -1,0 +1,40 @@
+.chat{
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  height: calc(100vh - 120px);
+  .left-bar{
+    width: 50%;
+    border-right: #cfebf1 solid 1px;;
+    &__main-img{
+      height: 70%;
+      .main-img-list{
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: yellow;
+        height: 95%;
+        width: 90%;
+      }
+    }
+    &__sub-img{
+      height: 30%;
+      .sub-img__list{
+        display: flex;
+        justify-content: center;
+        overflow-x: scroll;
+        .sub-img__list-img{
+          margin: 2px;
+          background-color:red;
+          height: 150px;
+          width:150px;
+        }
+      }
+    }
+  }
+  .right-bar{
+    width: 50%;
+
+  }
+  
+}
