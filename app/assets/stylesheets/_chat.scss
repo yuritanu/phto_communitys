@@ -32,9 +32,98 @@
       }
     }
   }
-  .right-bar{
+
+
+
+  .right-bar-chat{
     width: 50%;
+    &__my{
+      width: 100%;
+      margin: 10px 0;
+      overflow: hidden;
+      .my-message-img{
+        float: right;
+        width: 40px;
+        p{
+          width: 100%;
+          text-align: right;
+          border-radius: 50%;
+          background-color: red;
+        }
+      }
+      .my-message{
+        width: 100%;
+        text-align: right;
+        &__t{
+          display: inline-block;
+          position: relative; 
+          margin: 0 10px 0 0;
+          padding: 8px;
+          max-width: 250px;
+          border-radius: 12px;
+          background: #30e852;
+          font-size: 15px;
+          &:after{
+            content: "";
+            position: absolute;
+            top: 3px; 
+            right: -19px;
+            border: 8px solid transparent;
+            border-left: 18px solid #30e852;
+            -webkit-transform: rotate(-35deg);
+            transform: rotate(-35deg);
+          }
+        }
+      }
+    }
+
+    &__yur{
+      width: 100%;
+      margin: 10px 0;
+      overflow: hidden;
+      .yur-message-img{
+        float: left;
+        margin-right: -50px;
+        width: 40px;
+        p{
+          width: 100%;
+          height: auto;
+          border-radius: 50%;
+          background-color: red;
+        }
+      }
+      .yur-message{
+        width: 100%;
+        text-align: left;
+        &__t{
+          display: inline-block;
+          position: relative;
+          margin: 0 0 0 50px;
+          padding: 10px;
+          max-width: 250px;
+          border-radius: 12px;
+          background: #edf1ee;
+          &:after{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 3px;
+            left: -19px;
+            border: 8px solid transparent;
+            border-right: 18px solid #edf1ee;
+            -webkit-transform: rotate(35deg);
+          }
+        }
+      }
+    }
+    .right-bar-chat-bottm{
+      width: 50%;
+      height: 10%;
+      position: absolute;
+      bottom: 0px;
+      background: linear-gradient(#deeef1, #81d5eb);
+    }
+
 
   }
-  
 }
