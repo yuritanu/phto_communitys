@@ -104,7 +104,6 @@ a{
 .main{
   width: 100%;
   height: 100%;
-  background-color:#dfba6a;
   position: relative;
   .main-list{
     position: absolute;
@@ -112,7 +111,6 @@ a{
     left: 15px;
     right: 15px;
     bottom: 15px;
-    background-color:#156927;
     &__right{
       position: absolute;
       right: 80px;
@@ -157,7 +155,7 @@ a{
       font-weight: bold;
       font-family: arial unicode ms;
       font-size: larger;
-      color: #d067e6;
+      color: #81d5eb;
     }
   }
 }
