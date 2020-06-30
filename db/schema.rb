@@ -23,29 +23,19 @@ ActiveRecord::Schema.define(version: 2020_06_13_140026) do
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "comment", null: false
     t.bigint "user_id", null: false
-    t.bigint "community_id"
+    t.bigint "photo_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["community_id"], name: "index_comments_on_community_id"
+    t.index ["photo_id"], name: "index_comments_on_photo_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
-  end
-
-  create_table "communities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_communities_on_user_id"
   end
 
   create_table "photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image", null: false
     t.string "name", null: false
-    t.bigint "community_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["community_id"], name: "index_photos_on_community_id"
     t.index ["user_id"], name: "index_photos_on_user_id"
   end
 
@@ -63,9 +53,7 @@ ActiveRecord::Schema.define(version: 2020_06_13_140026) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "comments", "communities"
+  add_foreign_key "comments", "photos"
   add_foreign_key "comments", "users"
-  add_foreign_key "communities", "users"
-  add_foreign_key "photos", "communities"
   add_foreign_key "photos", "users"
 end

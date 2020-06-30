@@ -9,36 +9,21 @@
 ### Association
 - has_many :comments
 - has_many :Photos
-- has_many :communities
-
-***
-## ■Communitysテーブル（コミュニティ（写真とチャットが投稿できる））
-|Column|Type|Options|
-| -------- | -------- | -------- |
-|name|string|null: false|
-|user_id|references|null: false, foreign_key: true|
-
-### Association
-- has_many :users
-- has_many :comments
-- has_many :photos
-- belongs_to :categorie
 
 ***
 
-## ■Photosテーブル(写真（タイトル付き）)
+## ■Photosテーブル(写真（タイトル付き）チャットつける）
 
 |Column|Type|Options|
 | -------- | -------- | -------- |
 |image|string|null: false|
 |name|string|null: false|
 |category|references|null: false, index: true,
-|community_id|references|null: false, foreign_key: true|
 |user_id|references|null: false, foreign_key: true|
 ### Association
-- belongs_to :community
 - belongs_to :user
 - belongs_to :categorie
+- has_many :comments
 
 ***
 
@@ -58,8 +43,7 @@
 | -------- | -------- | -------- |
 |comment|text|null: false|
 |user_id|references|null: false, foreign_key: true|
-|community_id|references|foreign_key: true|
+|photo_id|references|null: false,foreign_key: true|
 ### Association
-- belongs_to :community
+- belongs_to :photo
 - belongs_to :user
-
