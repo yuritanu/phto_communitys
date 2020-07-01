@@ -2,23 +2,23 @@
   = render '/tops/header'
 
   .main
+    %P ランダムPhoto
     .main-list
       .main-list__right
         .main-list__right__photo
           -# 画像貼る予定
           .photos   
-            %p カワイイい〜
+            
       .main-list__left
         .main-list__left__photo
           -# 画像貼る予定
           .photos 
-            %p キレイ・・・
-      .link
-        ページ実験場
-        = link_to "チャットページ", 'photos#index'
-        = link_to "マイページ", '/tops/:top_id/myp'
-        = link_to "投稿ページ", '/photos/new'
+
+    .link
+      ページ実験場
+      = link_to "チャットページ", 'photos#index'
+      = link_to "マイページ", '/tops/:top_id/myp'
+      = link_to "投稿ページ", '/photos/new'
   .footer
-    .footer-list
-      %i.fas.fa-camera.fa-3x.white
-    %span.title-c ©️Photo　Ring　Community
+    = render '/tops/footer'
+   
