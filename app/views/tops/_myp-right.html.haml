@@ -1,3 +1,11 @@
 -# マイページ右
 .myp-right
-  あああ
+  %p 〇〇のマイページ
+  .myp-right-list
+    .myp-right-list__icon
+      -# ↑アイコン設定
+    .myp-right-list__name
+      ニックネーム : 
+    .myp-right-list__pas
+      編集の時だけパスワード
+    %input.myp-right-list__btn{type: "submit", value:"Edit"}

@@ -29,5 +29,41 @@
   }
   .myp-right{
     width: 50%;
+    p{
+      color: #81d5eb;
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 3px;
+      margin-bottom: 10px;
+    }
+    .myp-right-list{
+      width: 100%;
+      height: calc(100vh - 250px);
+      text-align: center;
+      &__icon{
+        margin: 0 auto;
+        width: 180px;
+        height: 180px;
+        border-radius: 100px;
+        background-color: yellow;
+      }
+      &__name{
+        margin: 5px;
+      }
+      &__pas{
+        margin: 5px;
+      }
+      &__btn{
+        margin-top: 30px;
+        color: white;
+        height: 60px;
+        width: 100px;
+        font-size: larger;
+        background: linear-gradient(#81d5eb,  #deeef1);
+        cursor: pointer;
+        border-style: none;
+      }
+    }
   }
 }

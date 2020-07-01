@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources :photos, only: [:index, :new]
 
   # カテゴリー関係
-  resources :categories, only: [:new]
+  resources :categories, only: [:new, :index]
 end
