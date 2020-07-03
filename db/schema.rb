@@ -10,34 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_13_140026) do
-
-  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "ancestry"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["ancestry"], name: "index_categories_on_ancestry"
-  end
-
-  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "comment", null: false
-    t.bigint "user_id", null: false
-    t.bigint "photo_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["photo_id"], name: "index_comments_on_photo_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
-  end
-
-  create_table "photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "image", null: false
-    t.string "name", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_photos_on_user_id"
-  end
+ActiveRecord::Schema.define(version: 2020_06_13_134751) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
@@ -53,7 +26,4 @@ ActiveRecord::Schema.define(version: 2020_06_13_140026) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "comments", "photos"
-  add_foreign_key "comments", "users"
-  add_foreign_key "photos", "users"
 end
