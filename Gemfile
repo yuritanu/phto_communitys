@@ -66,3 +66,5 @@ gem 'pry-rails'
 gem "ancestry"
 gem "jquery-rails"
 gem "font-awesome-sass"
+gem "carrierwave"
+gem "rmagick"
