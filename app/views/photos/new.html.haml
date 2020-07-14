@@ -3,18 +3,24 @@
 
   .photos-list
     .photos-list__img
-      %input{type: "text", placeholder: "画像を選ぶ", class: '#'}
-      ここに画像aa
-    .photos-list__title
-      %input{type: "text", placeholder: "写真のタイトル", class: '#'}
-      画像のタイトル  
-    .photos-list__categories
-      %input{type: "text", placeholder: "カテゴリーを選ぶ", class: '#'}
-      画像のカテゴリー
-      %input.chat-btn{type: "submit", value:"Photo投稿"}
-  
-  
-  
-  .footer
-    = render '/tops/footer'
-   
+      -# 画像がいるかどうか
+      -# - if @photo.image?
+      -#   = image_tag @photo.image.url
+      -# - else
+      -#   %i.fas.fa-camera.fa-3x.white
+
+    = form_for [@photo] do |f|
+    
+      -# 画像選択
+      .photo-form
+        =f.label :image do
+          %i.fas.fa-camera.fa-3x
+          = f.file_field :image, class: "file_btn"
+
+      -# 画像のタイトル
+      .form-list
+        = f.text_field :name, class: "photos-list__title", placeholder: 'Photoタイトル'
+        -#  カテゴリー選択
+        = f.text_field :categorie, placeholder: "カテゴリーを選ぶ", class: "photos-list__categories"
+        -#  投稿ボタン
+        = f.submit "Photo投稿", class: "form-btn" 

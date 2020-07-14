@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :tops, only: [:index, :show] do
     get 'myp'
   end
-  resources :photos, only: [:index, :new]
+  resources :photos, only: [:index, :new, :create]
 
   # カテゴリー関係
   resources :categories, only: [:new, :index]
