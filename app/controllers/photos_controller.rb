@@ -9,13 +9,18 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.new(photo_params)
+    Photo.create(photo_params)
+    redirect_to root_path
+  end
+  
+  def show
+    
   end
   
   private
 
-  def photo_parame
-    params.require(:phto).permit(:image, :name, :categorie).merge(user_id: current_user.id)
+  def photo_params
+    params.require(:photo).permit(:image, :name).merge(user_id: current_user.id)
   end
 
 end

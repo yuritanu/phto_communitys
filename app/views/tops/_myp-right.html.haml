@@ -3,6 +3,12 @@
   %p 〇〇のマイページ
   .myp-right-list
     .myp-right-list__icon
+      -# 画像がいるかどうか
+      -# - if @ .image?
+      -#   = image_tag @ .image.url
+      -# - else
+      -#   %i.
+
       -# ↑アイコン設定
     .myp-right-list__name
       ニックネーム : 

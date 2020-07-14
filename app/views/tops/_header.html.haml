@@ -4,32 +4,19 @@
     
     %ul.header-menu__list
       
-      %li.header-menu__list__categorie
-        -# カテゴリーつける     
-        .categorie
-          %p.categorie-t community
+      %li.header-menu__list__photo     
+        .photo
+          = link_to "Photo list", "/photos/show", class:"photo-t"
           
-          %ul.categorie-list
-            %li.parent-list
-              = link_to '親',"#", class:"parent-list__link"
-            %li.parent-list
-              = link_to '親',"#", class:"parent-list__link"
-              %ul.categorie-list-children
-                %li.children-list
-                  子
-                  %ul.categorie-list-grand_children
-                    %li.grand_children-list
-                      孫
-
       %li.header-menu__list__sachi
         -#  検索機能つけます
         %input.sachi-bar{type: "text", placeholder: "\uf002 写真をさがす", class: 'fa'}
           
       %li.header-menu__list__login
         - if user_signed_in?
-          = link_to "マイページ", "#", class:"login-t"
+          = link_to "my page", "#", class:"login-t"
           ＊ 
-          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "login-t"
+          = link_to "Log out", destroy_user_session_path, method: :delete, class: "login-t"
         - else
           = link_to "Login", new_user_session_path, class: "login-t"
           ＊ 
